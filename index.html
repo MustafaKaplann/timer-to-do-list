@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer & To-Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"    />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="timed.css">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+
+<div class="main-page">
+
+
+      <nav class="mask">
+      <p id="nav-head">Timer & To-Do List</p>
+        <ul class="list">
+          <li class="nav-items"><a href="index.html">Home</a></li>
+          <li class="nav-items"><a href="about.html">About Project</a></li>
+          <!-- <li class="nav-items"><a href="howtouse.html">How to Use</a></li> -->
+        </ul>
+        <button class="menu">Menu</button>
+      </nav>
+
+      
+<!-- ---------------------------------------------------- -->
+
+<nav id="side-nav">
+  <a href="#first"><i class="fa-regular fa-note-sticky"></i></a>
+  <a href="#second"><i class="fa-regular fa-bell"></i></a>
+  <a href="#third"><i class="fa-regular fa-trash-can"></i></a>
+</nav>
+
+<!-- ---------------------------------------------------- -->
+
+<div class= 'container'> 
+
+  <section id= 'first'>
+    <button onclick="historyBack()" id="back-button">BACK</button>
+    
+    
+    <div class="note-input-container">
+      <textarea id="noteInput" placeholder="Enter your note here"></textarea>
+      <button id="pin-note-button">
+          <i class="fas fa-thumbtack"></i>
+      </button>
+    </div>
+    <div id="pinnedNotesContainer" class="notes-container pinned-notes"></div>
+    
+    
+    
+    <div id="notesContainer" class="notes-container"></div>
+     </section>
+
+
+<!-- ---------------------------------------------------- -->
+
+<section id="second">
+  <button onclick="historyBack()" id="back-button">BACK</button>
+  <div class="timed-input-container">
+    <textarea id="timedNoteInput" placeholder="Enter your timed note here"></textarea>
+    <input type="number" id="noteDuration" placeholder="Duration (seconds)">
+    <button id="add-timed-note-button">Add Timed Note</button>
+  </div>
+  <div id="timedNotesContainer" class="notes-container"></div>
+</section>
+
+ <!-- ---------------------------------------------------- -->
+
+<section id= 'third'>
+  <button onclick="historyBack()" id="back-button">BACK</button>
+  <h1 class="h1-deleted-content">DELETED CONTENT</h1>
+  
+    <div id="trashContainer"></div>
+ </section>
+
+ <!-- ---------------------------------------------------- -->
+
+ <div class="card-home">
+  <div class="main-head">
+    <h1>Web Programming - I</h1>
+   </div>
+   <div class="other-content">
+     <!-- <div class="other-head"><h1></h1></div> -->
+     <div class="explaination" style="white-space: pre-wrap;">Welcome to Timer & To-Do List project! This web application is designed to enhance productivity by organizing tasks efficiently. The site is divided into three main sections:
+
+<i class="fa-regular fa-note-sticky"></i>  <b>Regular Notes</b>: This section allows users to create and manage notes in a straightforward manner. Users can jot down important tasks or reminders with ease.
+
+<i class="fa-regular fa-bell"></i>  <b>Timed Notes</b>: In this section, users can create notes with a specified time limit. Once the time is up, the application will notify the user, ensuring that important tasks are completed on time.
+
+<i class="fa-regular fa-trash-can"></i>  <b>Deleted Notes</b>: This section keeps a record of previously deleted notes. Users can review and restore any deleted notes if needed, providing a safety net for accidentally removed tasks.
+
+
+<p style="display: flex; justify-content: flex-end;"><b><i>by Mustafa KAPLAN</i></b></p>
+</div>
+</div>
+</div>
+
+<!-- ---------------------------------------------------- -->
+
+</div>
+
+<!-- POP-UP ---------------------------------------------------- -->
+
+<div id="expiredNotePopup" class="popup">
+  <div class="popup-content">
+    <span class="close">&times;</span>
+    <p id="expiredNoteText"></p>
+    <p id="expiredNoteDuration"></p>
+  </div>
+  </div>
+
+<!-- ---------------------------------------------------- -->
+
+</div>
+
+      <!-- <img src="/assets/img/black-texture-background.jpg" alt=""> -->
+
+      <script src="javascript/main.js"></script>
+      <script src="javascript/timedNote.js"></script>
+      <script src="javascript/goTo.js"></script>
+      
+    </body>
+</html>
