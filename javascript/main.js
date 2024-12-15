@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let noteCounter = 0;
   
     function addNote() {
-      const noteText = noteInput.value.trim();
+      const noteText = noteInput.value.trim(); // gereksiz boşlukları sil
       if (noteText !== '') {
         createNoteElement(noteText);
         noteInput.value = '';
