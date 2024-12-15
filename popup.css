@@ -13,8 +13,7 @@
   }
   
   .popup-content {
-    overflow: hidden; 
-  
+    overflow: hidden;
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
@@ -33,7 +32,6 @@
   .close:hover,
   .close:focus {
     color: black;
-    
     text-decoration: none;
     cursor: pointer;
   }
