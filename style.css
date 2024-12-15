@@ -79,9 +79,10 @@ margin-top: 20px;
   mask-image: linear-gradient(black 70%, transparent);
   -webkit-mask-image: linear-gradient(black 70%, transparent);
 
-  @media (min-width: 640px) {
-    padding: 16px 50px 30px 50px;
+  @media (max-width: 640px) {
+    display: none;
   }
+  
 }
 .mask.is-hidden {
   transform: translateY(-100%);
